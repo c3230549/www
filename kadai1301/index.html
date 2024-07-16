@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design with Button Actions</title>
+</head>
+<style>
+    header{
+        background-color: black;
+        color:white;
+        text-align: center;
+    }
+
+    footer{
+        background-color: black;
+        color:white;
+        text-align: center;
+    }
+
+    .color1{
+        padding: 10px;
+        color: white;
+        background-color: #00d000;
+        border:none;
+        border-radius: 5px;
+    }
+
+    .color2{
+        padding: 10px;
+        color: white;
+        background-color: #ff4d00;
+        border:none;
+        border-radius: 5px;
+    }
+
+    .color3{
+        padding: 10px;
+        color: white;
+        background-color: #0077ff;
+        border:none;
+        border-radius: 5px;
+    }
+
+    .color4{
+        padding: 10px;
+        color: white;
+        background-color: #ffd300;
+        border:none;
+        border-radius: 5px;
+    }
+    .Section1{
+        padding: 20px;
+
+        margin: 20px;
+        background-color: #e6f7ff;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+
+    .Section2{
+        padding:20px;
+        margin: 20px;
+        background-color: #ffefd5;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+
+    .Section3{
+        padding: 20px;
+        margin: 20px;
+        background-color: #ffd6ff;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+
+    .Section4{
+        padding: 20px;
+        margin: 20px;
+        background-color: #c8ffa7;
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+        border-radius: 10px;
+    }
+
+    .paresent1{
+        display: flex;
+    }
+
+    .paresent2{
+        display: flex;
+    }
+
+    .paresent3{
+        display: flex;
+    }
+
+    .paresent4{
+        display: flex;
+    }
+
+    @media screen and (max-width:1050px){
+        .paresent1{
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width:850px){
+        .paresent4{
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width:768px){
+        .paresent2{
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width:400px){
+        .paresent1{
+            display: block;
+        }
+    }
+
+    img{
+        border-radius: 10px;
+    }
+</style>
+<script>
+    function showAlert(){
+        alert("Button clicked");
+    }
+</script>
+<body>
+    <header>
+        <h3>Responsive Design with Button Actions</h3>
+    </header>
+    <div class="paresent1"> 
+        <div class="paresent2">
+            <div class="Section1">
+                <h2><p>Section 1</p></h2>
+                <p>This is the first section. It has a light blue background,padding,margin,and a box shadow.
+                The layout adjusts responsively to different screen size.</p>
+                <img src="section1.jpg" width = "80%"> 
+                <button class="color1" onclick="showAlert()">Cleck Me</button>
+            </div>
+
+            <div class="Section2">
+                <h2><p>Section 2</p></h2>
+                <p>This is the first section. It has a light orange background,padding,margin,and a box shadow.
+                The layout adjusts responsively to different screen size.</p>
+                <img src="section2.jpg" width = "80%"> 
+                <button class="color2" onclick="showAlert()">Cleck Me</button>
+            </div>
+        </div>
+
+            <div class="paresent3">
+                <div class="Section3">
+                    <h2><p>Section 3</p></h2>
+                    <p>This is the first section. It has a light purple background,padding,margin,and a box shadow.
+                    The layout adjusts responsively to different screen size.</p>
+                    <img src="section3.jpg" width = "80%"> 
+                    <button class="color3" onclick="showAlert()">Cleck Me</button>
+                </div>
+                <div class="Section4">
+                    <h2><p>Section 4</p></h2>
+                    <p>This is the first section. It has a light green background,padding,margin,and a box shadow.
+                    The layout adjusts responsively to different screen size.</p>
+                    <img src="section4.jpg" width = "80%"> 
+                    <button class="color4" onclick="showAlert()">Cleck Me</button>
+                </div>
+            </div>
+    </div>
+    <footer>
+        <h5>@2024 Advanced Responsive Design Practice</h5>
+    </footer>
+</body>
+</html>

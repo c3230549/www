@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Practice</title>
+</head>
+<style>
+.paresent{
+    display: flex;
+}
+.paresent2{
+    display: flex;
+}
+body{
+    background-color: #bdd8e4;
+}
+.Section1{
+    border-radius: 5px;
+    padding:20px;
+    margin: 10px;
+    background-color: #e6f7ff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.Section2{
+    border-radius: 5px;
+    padding:20px;
+    margin: 10px;
+    background-color: #ffefd5;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+.Section3{
+    border-radius: 5px;
+    padding:20px;
+    margin: 10px;
+    background-color: #ffd6ff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
+}
+
+
+
+
+@media screen and (max-width: 1050px){
+    .paresent{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 768px){
+    .paresent2{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 450px){
+    .paresent{
+        display: block;
+    }
+}
+ 
+</style>
+<body>
+    <h1>Responsive Design Practice</h1>
+    <div class="paresent">
+        <div class="paresent2">
+            <div class="Section1">
+            <h2><p>Section 1</p></h2>
+                <p>This is the first section. It has a light blue background,padding,margin,and a box shadow.
+                The layout adjusts responsively to different screen size.</p>
+                <img src="section1.jpg" width = "80%"> 
+            </div>
+
+            <div class="Section2">
+                <h2><p>Section 2</p></h2>
+                <p>This is the second section. It has a light orange background,padding,margin,and a box shadow.
+                The layout adjusts responsively to different screen size.</p>
+                <img src="section2.jpg" width = "80%"> 
+            </div>
+        </div>
+        <div class="Section3">
+        <h2><p>Section 3</p></h2>
+        <p>This is the third section. It has a light purple background,padding,margin,and a box shadow.
+        The layout adjusts responsively to different screen size.</p>
+        <img src="section3.jpg" width = "80%"> 
+        </div>
+    </div>
+</body>
+</html>
