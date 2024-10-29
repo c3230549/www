@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>要素の取得と内容の変更</title>
+</head>
+<style>
+    .sample{
+        color: red;
+    }
+
+    .sample2{
+        font-weight: bold;
+    }
+</style>
+<body>
+    <h1>座席の予約</h1>
+    <p>東京会場<span id="yoyaku" class = "sample">（予約受付中）</span></p>
+    <span id="hyouzi" class = "sample2"><button onclick="yoyaku()">予約する</button></span>
+    
+    <script>
+        
+function yoyaku(){
+        let obj = document.getElementById("yoyaku");
+        console.log(obj.textContent);
+        obj.textContent ="（予約済み）";
+
+        let mbj = document.getElementById("hyouzi");
+        console.log(mbj.textContent);
+        mbj.textContent ="ありがとうございました。";
+    }
+    </script>
+</body>
+</html>
