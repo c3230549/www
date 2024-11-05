@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>要素の追加と削除</title>
+</head>
+<body>
+    <h3>写真の一覧</h3> 
+    <p>以下のボタンをクリックすると、写真が一覧表示されます。</p>
+    <button onclick="syasin()" id ="button">写真を表示</button>
+    <p id = "picture"></p>
+    <script>
+    function syasin(){
+        let list=['<img src = "photo_1.jpg">','<img src = "photo_2.jpg">','<img src = "photo_3.jpg">','<img src = "photo_4.jpg">',
+                '<img src = "photo_5.jpg">','<img src = "photo_6.jpg">','<img src = "photo_7.jpg">','<img src = "photo_8.jpg">']
+ 
+        picture.insertAdjacentHTML("beforeend",list[0]);
+        picture.insertAdjacentHTML("beforeend",list[1]);
+        picture.insertAdjacentHTML("beforeend",list[2] +"<br>");
+        picture.insertAdjacentHTML("beforeend",list[3]);
+        picture.insertAdjacentHTML("beforeend",list[4]);
+        picture.insertAdjacentHTML("beforeend",list[5] + "<br>");
+        picture.insertAdjacentHTML("beforeend",list[6]);
+        picture.insertAdjacentHTML("beforeend",list[7]);
+        
+        document.getElementById('button').remove();
+    }
+    </script>
+</body>
+</html>
