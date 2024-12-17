@@ -3,15 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>数値の入力とエラー処理</title>
     <style>
-
+    #message{
+        width: 256px;
+        padding: 15px;
+        margin: 25px 0px;
+        background-color: #FFCC99;
+    }
     </style>
 </head>
 <body>
-
+    <h1>ｎ～ｍで割り切れる数字</h1>
+    <p>1～10の好きな範囲で</p>
+    <p>割り切れる最小の数値をJavaScriptで求めます。</p>
+    <button onclick="result()">範囲を指定</button>
+    <div id = "message">ここに結果が表示されます。</div>
 <script>
+    function result(){
+        let min = parseInt(prompt('範囲の最小値を１～１０で入力してください'));
+        let max = parseInt(prompt('範囲の最大値を１～１０で入力してください'));
+        let answer = 0;
+
+        //計算式（未完成）
+
+        document.getElementById('message').textContent = min + '～' + max + 'で割り切れる最小の数値は' + answer + 'です。';
+    }
+
+
+
 </script>
     
 </body>
-</html>
+</html> 
