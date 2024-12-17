@@ -6,7 +6,7 @@
     <title>数値の入力とエラー処理</title>
     <style>
     #message{
-        width: 256px;
+        width: 400px;
         padding: 15px;
         margin: 25px 0px;
         background-color: #FFCC99;
@@ -20,15 +20,25 @@
     <button onclick="result()">範囲を指定</button>
     <div id = "message">ここに結果が表示されます。</div>
 <script>
-    function result(){
-        let min = parseInt(prompt('範囲の最小値を１～１０で入力してください'));
-        let max = parseInt(prompt('範囲の最大値を１～１０で入力してください'));
-        let answer = 0;
 
         //計算式（未完成）
-
-        document.getElementById('message').textContent = min + '～' + max + 'で割り切れる最小の数値は' + answer + 'です。';
+        function result() {
+  let min = parseInt(prompt('範囲の最小値を1～10で入力してください。'));
+  let max = parseInt(prompt('範囲の最大値を1～10で入力してください。'));
+  let anser = 0;
+  LABEl:for(let i=max;i<=10000;i++){
+    for(let j=min;j<=max;j++){
+      if(i%j!=0){
+        continue LABEl;
+      }else if(j==max){
+        anser = i;
+      break LABEl;
+      }    
     }
+  }
+  document.getElementById('message').textContent = min + '～' + max + 'で割り切れる最小の数字は'+anser + 'です。';
+}
+    
 
 
 
