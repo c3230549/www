@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロパティ</title>
+    <style>
+        div{   
+        border:3px solid black;
+        padding: 15px;
+        
+        }
+        button{
+            margin-top:15px;
+            margin-bottom:15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTMLの表示</h1>
+    <p>ボックス内の表示されている部分のHTMLを表示します</p>
+    <div id="text">
+    <h3>人口８００万人以上の都道府県</h3>
+    <ul>
+        <li>東京都</li>
+        <li>神奈川県</li>
+        <li>大阪府</li>
+    </ul>
+    </div>
+
+
+    <button onclick="show()">HTMLを表示</button>
+    <div id ="message">ここにHTMLが表示されます</div>
+    <script>
+        function show(){
+            let anser = document.getElementById('text');
+            document.getElementById('message').textContent = anser.innerHTML;
+        }
+    </script>
+</body>
+
+
+</html>
